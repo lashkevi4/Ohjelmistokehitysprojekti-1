@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>first page</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global_layout.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/login_index.css" />
+    <link rel="stylesheet" href="./styles/newsfeed.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="topnav">
+        <a href="./index.html"><img src="./images/building.png" id="logo" /></a>
+        <ul class="navlinks">
+          <li><a class="active" href="./asukkaat.html">Etusivu</a></li>
+          <li><a href="" onclick="loadPage('newsfeed.html'); return false;">Ajankohtaista</a></li>
+          <li><a href="#contact">Yhteydenotto</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div id="maincontent">
+    <main id="mainbox">
+      <div class="background-opaque">
+        <section class="wrapper">
+          <h1>Asukassivut</h1>
+          <p class="address">As. OY Kristalli</p>
+          <p class="address">Pikselikatu 12, Helsinki</p>
+          <section class="middlenav">
+            <ul>
+              <li><a href="" onclick="loadPage('vikailmoitus.html'); return false;">Tee vikailmoitus</a></li>
+              <li><a href="" onclick="loadPage('varaukset.html'); return false;">Varaa tiloja</a></li>
+              <li><a href="">Tiedotteet</a></li>
+              <li><a href="">Ota yhteyttä</a></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </main>
+    <section class="newsfeed">
+      <h2>Uutiset ja tiedotteet</h1>
+      <section class="news">
+        <article id="news1">
+          <h3>News 1</h3>
+          <p class="date">Fri 14th Sept 2023 09:23</p>
+          <div class="articleBody"></div>
+          <a onclick="toggleArticle(this.parentElement)"></a>
+        </article>
+        <article id="news2">
+          <h3>News 2</h3>
+          <p class="date">Thu 13th Sept 2023 17:01</p>
+          <div class="articleBody"></div>
+          <a onclick="toggleArticle(this.parentElement)"></a>
+        </article>
+        <article id="news3">
+          <h3>News 3</h3>
+          <p class="date">Thu 13th Sept 2023 12:48</p>
+          <div class="articleBody"></div>
+          <a onclick="toggleArticle(this.parentElement)"></a>
+        </article>
+      </section>
+      <a href="" onclick="loadPage('newsfeed.html'); return false;">Kaikki uutiset ja tiedotteet</a>
+    </section>
+</div>
+    <hr />
+
+    <footer id="last-part">
+      <ul>
+        <li><a href="">Yhteystiedot</a></li>
+        <li><a href="">Asiakaspalvelu</a></li>
+        <li><a href="">Social Media</a></li>
+      </ul>
+    </footer>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
