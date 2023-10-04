@@ -1,0 +1,47 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+/* .input-box {
+  width: 100%;
+} */
+
+select[name~="service"],
+textarea {
+  padding: 0.2rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: block;
+  background-color: transparent;
+}
+
+textarea {
+  margin: auto;
+  max-width: 100%;
+  min-height: 3rem;
+  flex-basis: 100%;
+  font-family: inherit;
+}
+
+textarea::placeholder {
+  font-style: sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.wrapper > * {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+.lisatietolaatikko {
+  display: block;
+}

@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/login_index.css" />
     <link rel="stylesheet" href="./styles/newsfeed.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   </head>
   <body>
 
@@ -30,20 +37,24 @@
     <main id="mainbox">
       <div class="background-opaque">
         <section class="wrapper">
+          <section class="headerbox">
           <h1>Asukassivut</h1>
           <p class="address">As. OY Kristalli</p>
           <p class="address">Pikselikatu 12, Helsinki</p>
-          <section class="middlenav">
-            <ul>
-              <li><a href="" onclick="loadPage('vikailmoitus.html'); return false;">Tee vikailmoitus</a></li>
-              <li><a href="" onclick="loadPage('varaukset.html'); return false;">Varaa tiloja</a></li>
-              <li><a href="">Tiedotteet</a></li>
-              <li><a href="">Ota yhteyttä</a></li>
-            </ul>
-          </section>
+        </section>
+
         </section>
       </div>
     </main>
+    
+    <section class="middlenav">
+      <ul>
+        <li><a href="" onclick="loadPage('vikailmoitus.html'); return false;">Tee vikailmoitus</a></li>
+        <li><a href="" onclick="loadPage('varaukset.html'); return false;">Varaa tiloja</a></li>
+        <li><a href="">Tiedotteet</a></li>
+        <li><a href="">Ota yhteyttä</a></li>
+      </ul>
+    </section>
     <section class="newsfeed">
       <h2>Uutiset ja tiedotteet</h1>
       <section class="news">
@@ -72,12 +83,27 @@
     <hr />
 
     <footer id="last-part">
-      <ul>
-        <li><a href="">Yhteystiedot</a></li>
-        <li><a href="">Asiakaspalvelu</a></li>
-        <li><a href="">Social Media</a></li>
-      </ul>
+      <div class="socialIcon">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li>
+            <a href="#">Address</a>
+          </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
     </footer>
+
     <script src="./scripts/main.js"></script>
   </body>
 </html>

@@ -17,6 +17,20 @@
 .address {
   text-align: center;
 }
+main {
+  background-image: url("../images/asukkaille-bg.png");
+}
+.background-opaque {
+  background-color: rgba(255, 255, 255, 0.2);
+  min-height: 400px;
+}
+.headerbox {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  margin: auto;
+  padding: 3rem 6rem;
+  border-radius: 20px;
+}
 #mainbox {
   width: 100%;
   margin-block-end: 1rem;
@@ -44,11 +58,11 @@ header {
 .remember {
   margin-block-end: 30px;
 }
-i {
+/* i {
   display: inline;
   font-size: 20px;
   padding-inline: 0.5rem;
-}
+} */
 
 .remember {
   display: flex;

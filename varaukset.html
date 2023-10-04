@@ -1,9 +1,35 @@
-<main id="mainbox">
+<head>
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global_layout.css" />
+  <link rel="stylesheet" href="styles/varaukset.css" />
+</head>
+
+<main id="mainbox" class="reservationform">
   <div class="background-opaque">
     <section class="wrapper">
-      <h1>Varaa tiloja</h1>
-      <p>Varaa tästä saunavuoro tai parkkipaikka</p>
-      <form>Tähän lomake</form>
+      <h1>Tilojen ja palvelujen varaukset</h1>
+      <span>Valitse: </span
+      ><select name="service" id="services">
+        <option value="none" selected disabled hidden>-</option>
+        <option value="sauna">Saunavuoron varaus</option>
+        <option value="parkkipaikka">Parkkipaikan vuokraus</option>
+        <option value="kerhohuone">Kerhohuoneen varaus</option>
+      </select>
+      <h2>Parkkipaikan vuokraus</h2>
+      <form action="">
+        <label for="parkkipaikanvaraus">Varaan parkkipaikan</label>
+        <input type="checkbox" value="parkkipaikanvaraus" />
+        <label for="parkkilisatiedot"
+          >Lisätietoja (esim. toiveet parkkipaikan sijainnista)</label
+        >
+        <!-- <div class="lisatietolaatikko"> -->
+        <textarea
+          name="parkkilisatiedot"
+          placeholder="Lisätietoja, esim. toiveet parkkipaikan sijainnista"
+        ></textarea>
+        <!-- </div> -->
+        <button class="btn" type="submit">Submit</button>
+      </form>
     </section>
   </div>
 </main>

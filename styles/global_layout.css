@@ -10,6 +10,11 @@ body {
 h1 {
   letter-spacing: 0.08rem;
 }
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -70,6 +75,8 @@ main {
   border-radius: 10px;
   background-image: url("../images/third_pic.jpg");
   background-size: 100% calc(100%);
+  background-size: cover;
+  background-position: center;
   max-height: fit-content;
 }
 .background-opaque {
@@ -97,14 +104,58 @@ main {
 .input-box input::placeholder {
   color: black;
 }
-footer {
-  padding: 3rem;
-  background-color: #00000021;
+
+#last-part {
+  background-color: #54b3d6;
+  margin-top: 3rem;
+  border-radius: 10px;
 }
-footer ul {
+.socialIcon {
   display: flex;
-  flex-direction: row;
-  gap: 4rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.socialIcon a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcon a i {
+  font-size: 1.5em;
+  color: black;
+  opacity: 0.9;
+}
+
+.socialIcon a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialIcon a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+.footer-nav {
+  margin: 30px 0;
+  padding-bottom: 1rem;
+}
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.footer-nav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footer-nav ul li a:hover {
+  opacity: 1;
 }
 
 /* Tablet view */

@@ -26,14 +26,17 @@ const loadPage = (filename) => {
 
 const articleTexts = [
   {
+    header: "Talvi lähestyy",
     open: "true",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Inventore ab repellat, laboriosam aliquam autem officiis.",
   },
   {
+    header: "Pihakaivojen puhdistus 13.10. klo 9-13",
     open: "true",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente aut iusto, ipsum omnis laudantium exercitationem dolores ab!\tAccusamus voluptatem quam facilis soluta veniam numquam alias ipsum ut suscipit, molestias ratione sequi iste voluptatibus laudantium, repellendus praesentium laborum.\nAspernatur qui iste consectetur dolore facere, nulla quo voluptates! Laboriosam quasi dolore praesentium est, harum obcaecati fugiat officiis.",
   },
   {
+    header: "A-rapun saunan kivet vaihdettu 30.9.",
     open: "true",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.\nNam, earum at facere praesentium neque excepturi harum dolorum sequi cupiditate natus totam, amet tempore, modi perferendis delectus maxime minima deleniti?",
   },
@@ -50,6 +53,7 @@ const loadArticles = () => {
   for (let i = 0; i < feedLength; i++) {
     const article = articles[i];
     loadArticle(article, getText(article));
+
     closeArticle(article);
   }
 };
