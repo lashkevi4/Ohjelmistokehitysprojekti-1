@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,15 +9,280 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/contact_layout.css" />
 
-    <script
-      src="https://kit.fontawesome.com/ecf5de3203.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/ecf5de3203.js" crossorigin="anonymous"></script>
 
-    <title>Contacts</title>
+    <title>C o n t a c t s</title>
+
+    <style>
+      html {
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 1rem;
+        background-color: #ffffff;
+      }
+
+      #logo img {
+        width: 2rem;
+        padding: 1.7rem;
+        margin-top: -8rem;
+      }
+
+      .topnav {
+        background-color: white;
+        width: 100%;
+        height: 3rem;
+        overflow: hidden;
+      }
+
+      .topnav a {
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        color: #54b3d6;
+        margin: 0 -0.25rem;
+        padding: 0 0.25rem;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-decoration-line: none;
+        font-family: sans-serif;
+      }
+
+      .topnav ul {
+        display: flex;
+        float: right;
+        padding: 15px 30px;
+        text-decoration: none;
+        gap: 2rem;
+        font-family: initial;
+      }
+
+      .topnav a:hover {
+        box-shadow: inset 150px 0 0 0 #54b3d6;
+        color: white;
+      }
+
+      .small-title {
+        background-image: url(./images/first\ image.jpeg);
+        background-size: cover;
+        background-color: aqua;
+        background-position: center;
+        align-items: center;
+
+        height: 5rem;
+        border-radius: 0.4rem;
+      }
+
+      .small-title {
+        padding: 8rem;
+        font-size: 2.3rem;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .small-title h1 {
+        border: 1px solid #80808078;
+        padding: 3rem;
+        margin-top: -3rem;
+        background-color: #80808078;
+        border-radius: 20px 5px;
+      }
+
+      .middlenav ul {
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        padding: 70px;
+        gap: 5rem;
+        font-family: initial;
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .middlenav ul li {
+        border: 0.1rem solid lightgrey;
+        padding: 25px;
+        border-radius: 20px 5px;
+      }
+
+      .middlenav a {
+        position: relative;
+        text-decoration-line: none;
+        font-family: sans-serif;
+        color: #54b3d6;
+      }
+
+      .middlenav a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #54b3d6;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .middlenav a:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+
+      .second-part {
+        padding: 4rem;
+        text-align: center;
+      }
+
+      #about-us {
+        padding: 3rem;
+        font-size: 1.5rem;
+        float: left;
+        font-weight: bold;
+      }
+
+      .side_img> {
+        width: 100%;
+        border-radius: 20px 5px;
+        margin-top: -8rem;
+        max-width: 100%;
+        position: relative;
+        float: left;
+        border: 1px dotted black;
+        margin: 0px 0px 15px 20px;
+      }
+
+      #last-part {
+        padding: 3rem;
+        background-color: #00000021;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+      }
+
+      #last-part ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+      }
+
+      /* ------------------------------------------------------------------ */
+      .people {
+        width: 100%;
+        font-family: sans-serif;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+
+        line-height: 1.2;
+        border-radius: 10px;
+        background-color: #5caea812;
+        margin-right: 5px;
+
+      }
+
+      .human {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .photo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .photo img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .p {
+        font-size: 1rem;
+      }
+
+      .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 2.5rem;
+        line-height: 190%;
+      }
+
+      .social a {
+        color: #54b3d6;
+      }
+
+      .social i {
+        font-size: 2rem;
+      }
+
+      .social p:first-child {
+        margin-right: 10px;
+      }
+
+      .social p:last-child {
+        margin-left: 10px;
+      }
+
+      .flags {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .flag {
+        width: 35px;
+        height: 35px;
+      }
+
+      aside ul {
+        text-align: left;
+        /* list-style-type: disc; */
+      }
+
+      aside h3 {
+        font-size: 1.5rem;
+        padding: 0.7rem;
+      }
+
+      aside p {
+        padding-left: 25px;
+      }
+
+      small {
+        font-size: 0.6rem;
+        padding-left: 15px;
+      }
+
+      aside {
+        background-color: #54b3d6;
+        border-radius: 10px;
+        padding-left: 20px;
+      }
+
+      .under-middlenav {
+        display: flex;
+      }
+    </style>
   </head>
 
   <body>
+
     <header id="head">
       <div class="topnav">
         <ul>
@@ -32,6 +298,7 @@
     </header>
 
     <main>
+
       <section class="small-title">
         <h1>Elämäsi on helpompaa kanssamme</h1>
       </section>
@@ -45,123 +312,102 @@
         </ul>
       </section>
 
-      <section class="people">
-        <section class="human">
-          <section class="photo">
-            <img src="./images/man.png" alt="Man" />
+      <section class="under-middlenav">
+
+        <section class="people">
+
+          <section class="human">
+            <section class="photo">
+              <img src="./images/man.png" alt="Man" />
+            </section>
+
+            <section class="h3">
+              <h3>Jonny Oldman</h3>
+            </section>
+
+            <section class="p">
+              <p>Toimitusjohtaja</p>
+              <p>jonny.oldman(at)compani.fi</p>
+              <p><a href="tel:+358450001122">+358 45 000 1122</a></p>
+            </section>
+
+            <section class="social">
+              <p>
+                <a href="http://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+              </p>
+              <p>
+                <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+              </p>
+            </section>
+
+            <section class="flags">
+              <p><img class="flag" src="./images/eng.png" alt="ENGLISH" /></p>
+            </section>
           </section>
 
-          <section class="h3">
-            <h3>Jonny Oldman</h3>
+          <section class="human">
+            <section class="photo">
+              <img src="./images/women.png" alt="Man" />
+            </section>
+
+            <section class="h3">
+              <h3>Mia Ketolainen</h3>
+            </section>
+
+            <section class="p">
+              <p>Myyntipäällikkö</p>
+              <p>mia.ketolainen(at)compani.fi</p>
+              <p><a href="tel:+358449993344">+358 44 999 3344</a></p>
+            </section>
+
+            <section class="social">
+              <p>
+                <a href="http://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+              </p>
+            </section>
+
+            <section class="flags">
+              <p><img class="flag" src="./images/fin.png" alt="FINNISH" /></p>
+              <p><img class="flag" src="./images/swe.png" alt="SWEDISH" /></p>
+              <p><img class="flag" src="./images/eng.png" alt="ENGLISH" /></p>
+            </section>
           </section>
 
-          <section class="p">
-            <p>Toimitusjohtaja</p>
-            <p>jonny.oldman(at)compani.fi</p>
-            <p><a href="tel:+358450001122">+358 45 000 1122</a></p>
+          <section class="human">
+            <section class="photo">
+              <img src="./images/women2.png" alt="Man" />
+            </section>
+
+            <section class="h3">
+              <h3>Nina Rantanen</h3>
+            </section>
+
+            <section class="p">
+              <p>Toimisto</p>
+              <p>nina.rantanen(at)compani.fi</p>
+              <p><a href="tel:+358445559191">+358 44 555 9191</a></p>
+            </section>
+
+            <section class="social">
+              <p>
+                <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+              </p>
+            </section>
+
+            <section class="flags">
+              <p><img class="flag" src="./images/fin.png" alt="FINNISH" /></p>
+              <p><img class="flag" src="./images/rus.png" alt="RUSSIAN" /></p>
+              <p><img class="flag" src="./images/eng.png" alt="ENGLISH" /></p>
+            </section>
           </section>
 
-          <section class="social">
-            <p>
-              <a href="http://linkedin.com"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </p>
-            <p>
-              <a href="http://twitter.com"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-            </p>
-          </section>
-
-          <section class="flags">
-            <!-- <p><img class="flag" src="../images/fin.png" alt="FINNISH"></p> -->
-            <!-- <p><img class="flag" src="../images/swe.png" alt="SWEDISH"></p> -->
-            <p><img class="flag" src="./images/eng.png" alt="ENGLISH" /></p>
-          </section>
-        </section>
-
-        <section class="human">
-          <section class="photo">
-            <img src="./images/women.png" alt="Man" />
-          </section>
-
-          <section class="h3">
-            <h3>Mia Ketolainen</h3>
-          </section>
-
-          <section class="p">
-            <p>Myyntipäällikkö</p>
-            <p>mia.ketolainen(at)compani.fi</p>
-            <p><a href="tel:+358449993344">+358 44 999 3344</a></p>
-          </section>
-
-          <section class="social">
-            <p>
-              <a href="http://linkedin.com"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </p>
-            <!-- <p><a href="http://twitter.com" style="color: white"><i class="fa-brands fa-twitter"></i></a></p> -->
-          </section>
-
-          <section class="flags">
-            <p><img class="flag" src="./images/fin.png" alt="FINNISH" /></p>
-            <p><img class="flag" src="./images/swe.png" alt="SWEDISH" /></p>
-            <p><img class="flag" src="./images/eng.png" alt="ENGLISH" /></p>
-          </section>
-        </section>
-
-        <section class="human">
-          <section class="photo">
-            <img src="./images/women2.png" alt="Man" />
-          </section>
-
-          <section class="h3">
-            <h3>Nina Rantanen</h3>
-          </section>
-
-          <section class="p">
-            <p>Toimisto</p>
-            <p>nina.rantanen(at)compani.fi</p>
-            <p><a href="tel:+358445559191">+358 44 555 9191</a></p>
-          </section>
-
-          <section class="social">
-            <p>
-              <a href="http://twitter.com"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-            </p>
-          </section>
-
-          <section class="flags">
-            <p><img class="flag" src="./images/fin.png" alt="FINNISH" /></p>
-            <p><img class="flag" src="./images/rus.png" alt="RUSSIAN" /></p>
-            <p><img class="flag" src="./images/eng.png" alt="ENGLISH" /></p>
-          </section>
         </section>
 
         <aside>
-          <!-- <h3>Toimipisteiden suorat yhteystiedot:</h3>
-
-          <section class="phones">
-            <ul>
-              <li>Imatra <a href="tel:+3580105243300">+358 010 524 3300</a></li>
-              <li>Kuopio <a href="tel:+3580105243301">+358 010 524 3301</a></li>
-              <li>Oulu <a href="tel:+3580105243302">+358 010 524 3302</a></li>
-            </ul>
-
-            <ul>
-              <li>Raisio <a href="tel:+3580105243303">+358 010 524 3303</a></li>
-              <li>Tuusula <a href="tel:+3580105243304">+358 010 524 3304</a></li>
-              <li>Vantaa <a href="tel:+3580105243305">+358 010 524 3305</a></li>
-            </ul>
-          </section> -->
 
           <h3>Aukioloajat:</h3>
-          <p>Palvelemme normaalisti MA-PE</p>
-          <p>KLO 8-16</p>
+          <p>Palvelemme normaalisti </p>
+          <p>MA-PE, KLO 8-16</p>
 
           <h3>Poikkeavat aukiolot:</h3>
 
@@ -174,10 +420,10 @@
             </li>
           </ul>
 
-          <small
-            >Puheluhinnat: 8,35 snt/puh + 16,69 snt/min (sis. alv. 24 %)</small
-          >
+          <small>Puheluhinnat: 8,35 snt/puh + 16,69 snt/min (sis. alv. 24 %)</small>
+
         </aside>
+
       </section>
 
       <hr />
@@ -191,4 +437,5 @@
       </ul>
     </footer>
   </body>
+
 </html>
