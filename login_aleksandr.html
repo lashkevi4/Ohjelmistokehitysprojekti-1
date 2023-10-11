@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Login Page</title>
+    <!-- Ваши стили CSS -->
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Здесь ваша верхняя часть страницы -->
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <div id="maincontent">
+      <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required></input>
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <div class="remember">
+          <label><input type="checkbox" />Remember me</label>
+          <a href="#">Forget password?</a>
+        </div>
+        <!-- Измененная кнопка для открытия модального окна -->
+        <button type="button" class="btn" id="openModal">Login</button>
+        <div class="register">
+          <p>Don't have an account?<a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <!-- Здесь можете разместить содержимое модального окна, например, ваши поля входа и кнопку внутри него -->
+      </div>
+    </div>
+
+    <!-- Ваши стили CSS -->
+    <style>
+      /* Ваши стили остаются здесь */
+
+      /* Добавлены стили для модального окна */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- JavaScript код для открытия/закрытия модального окна -->
+    <script>
+      // Получаем элементы модального окна, кнопку открытия и кнопку закрытия
+      var modal = document.getElementById('myModal');
+      var openModalButton = document.getElementById('openModal');
+      var closeButton = document.querySelector('.close');
+
+      // Функция для открытия модального окна
+      function openModal() {
+        modal.style.display = 'block';
+      }
+
+      // Функция для закрытия модального окна
+      function closeModal() {
+        modal.style.display = 'none';
+      }
+
+      // Обработчики событий для кнопок
+      openModalButton.addEventListener('click', openModal);
+      closeButton.addEventListener('click', closeModal);
+
+      // Закрыть модальное окно, если пользователь кликает вне его
+      window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+
+</html>

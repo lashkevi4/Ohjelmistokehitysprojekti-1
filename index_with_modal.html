@@ -1,0 +1,120 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>first page</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global_layout.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+      }
+
+      #login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="topnav">
+        <a href="#"><img src="./images/building.png" id="logo" /></a>
+        <ul class="navlinks">
+          <li><a class="active" href="#home">Etusivu</a></li>
+          <li><a id="openModalBtn" href="#">Asukkaalle</a></li>
+          <li><a href="./palvelumme.html">Palvelumme</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="small-title">
+      <h1>Elämäsi on helpompaa kanssamme</h1>
+    </section>
+    <section class="middlenav">
+      <ul>
+        <li><a href="#">Usein kysyttyä</a></li>
+        <li><a href="#">Tilaa ja ilmoita</a></li>
+        <li><a href="#">Pyydä tarjous</a></li>
+        <li><a href="./contacts.html">Ota yhteyttä</a></li>
+      </ul>
+    </section>
+    <section id="text-content">
+      <div id="about">
+        <h2>Keitä olemme</h2>
+        <p>Lorem ipsum...</p>
+      </div>
+      <div id="news">
+        <h2>Uutiset</h2>
+        <p>Lorem ipsum...</p>
+      </div>
+    </section>
+    <hr />
+    <footer id="last-part">
+      <ul>
+        <li><a href="#">Yhteystiedot</a></li>
+        <li><a href="#">Asiakaspalvelu</a></li>
+        <li><a href="#">Social Media</a></li>
+      </ul>
+    </footer>
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+      <div id="login">
+        <form action="">
+          <h1>Login</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="remember">
+            <label><input type="checkbox" />Remember me</label>
+            <a href="#">Forget password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="register">
+            <p>Don't have an account?<a href="#">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("modal");
+        const openBtn = document.getElementById("openModalBtn");
+
+        openBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          modal.style.display = "block";
+        });
+
+        window.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+
+</html>
