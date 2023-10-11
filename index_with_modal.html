@@ -17,18 +17,11 @@
         margin: 20px auto;
         width: 300px;
         z-index: 2;
-
-
         display: none;
         position: fixed;
-        /* фиксированное позиционирование */
         top: 50%;
-        /* положение от верхнего края */
         left: 50%;
-        /* положение от левого края */
         transform: translate(-50%, -50%);
-        /* смещение для центрирования */
-        /* ...остальные стили... */
       }
 
       .login-screen {
@@ -104,9 +97,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.7);
-        /* черный фон с 70% прозрачности */
         z-index: 1;
-        /* чтобы фон был ниже модального окна */
       }
     </style>
   </head>
@@ -158,7 +149,7 @@
       </ul>
     </footer>
 
-    <!-- Модальное окно -->
+    <!-- modal window -->
     <div class="login">
       <div class="login-screen">
         <div class="app-title">
@@ -189,7 +180,7 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         const openModalBtn = document.getElementById("openModalBtn");
-        const closeModalBtn = document.querySelector(".btn"); // Предполагая, что у вашей кнопки LOGIN класс "btn"
+        const closeModalBtn = document.querySelector(".btn");
         const modal = document.querySelector(".login");
         const overlay = document.getElementById("overlay");
 
@@ -205,8 +196,6 @@
           overlay.style.display = "none";
         });
       });
-
-
 
     </script>
 
