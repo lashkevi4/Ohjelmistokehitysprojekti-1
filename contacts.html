@@ -11,7 +11,7 @@
 
     <script src="https://kit.fontawesome.com/ecf5de3203.js" crossorigin="anonymous"></script>
 
-    <title>C o n t a c t s</title>
+    <title>Contacts</title>
 
     <style>
       html {
@@ -68,12 +68,8 @@
         background-color: aqua;
         background-position: center;
         align-items: center;
-
         height: 5rem;
         border-radius: 0.4rem;
-      }
-
-      .small-title {
         padding: 8rem;
         font-size: 2.3rem;
         color: #ffffff;
@@ -130,6 +126,7 @@
       .middlenav a:hover::before {
         transform-origin: left;
         transform: scaleX(1);
+
       }
 
       .second-part {
@@ -170,7 +167,8 @@
         gap: 4rem;
       }
 
-      /* ------------------------------------------------------------------ */
+      /* -------------- from aleksandr ----------------------- */
+
       .people {
         width: 100%;
         font-family: sans-serif;
@@ -182,16 +180,25 @@
 
         line-height: 1.2;
         border-radius: 10px;
-        background-color: #5caea812;
-        margin-right: 5px;
+        margin-right: 8px;
 
+        overflow: hidden;
       }
 
       .human {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        border-radius: 10px;
         padding: 10px;
+        background-color: #F5F9F9;
+        /* outline: 2px solid red; */
+
       }
 
       .photo {
@@ -204,6 +211,8 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
+
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       }
 
       h3 {
@@ -250,9 +259,14 @@
         height: 35px;
       }
 
+      aside {
+        background-color: #D1ECF2;
+        border-radius: 10px;
+        padding-left: 20px;
+      }
+
       aside ul {
         text-align: left;
-        /* list-style-type: disc; */
       }
 
       aside h3 {
@@ -269,14 +283,85 @@
         padding-left: 15px;
       }
 
-      aside {
-        background-color: #54b3d6;
-        border-radius: 10px;
-        padding-left: 20px;
-      }
-
       .under-middlenav {
         display: flex;
+      }
+
+      /* media For PHONES */
+      @media (max-width: 768px) {
+        .under-middlenav {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: white;
+        }
+
+        .people {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: white;
+        }
+
+        .human {
+          /* outline: 2px solid red; */
+          margin-bottom: 10px;
+          border-radius: 10px;
+          background-color: #F5F9F9;
+          box-sizing: border-box;
+        }
+
+        aside {
+          padding-bottom: 20px;
+        }
+
+        aside h3 {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          padding-top: 0;
+        }
+
+        small {
+          font-size: 0.6rem;
+          padding: 20px;
+        }
+      }
+
+      /* media For TABLETS */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .under-middlenav {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: white;
+        }
+
+        .people {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          margin-bottom: 10px;
+        }
+
+        .human {
+          border-radius: 10px;
+          background-color: #F5F9F9;
+          box-sizing: border-box;
+        }
+
+        aside {
+          padding-bottom: 20px;
+        }
+
+        aside h3 {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          padding-top: 0;
+        }
+
+        small {
+          font-size: 0.6rem;
+          padding: 20px;
+        }
       }
     </style>
   </head>
@@ -328,7 +413,7 @@
             <section class="p">
               <p>Toimitusjohtaja</p>
               <p>jonny.oldman(at)compani.fi</p>
-              <p><a href="tel:+358450001122">+358 45 000 1122</a></p>
+              <p><a href="tel:0450001122">045 0001122</a></p>
             </section>
 
             <section class="social">
@@ -357,7 +442,7 @@
             <section class="p">
               <p>Myyntipäällikkö</p>
               <p>mia.ketolainen(at)compani.fi</p>
-              <p><a href="tel:+358449993344">+358 44 999 3344</a></p>
+              <p><a href="tel:0449993344">044 9993344</a></p>
             </section>
 
             <section class="social">
@@ -385,7 +470,7 @@
             <section class="p">
               <p>Toimisto</p>
               <p>nina.rantanen(at)compani.fi</p>
-              <p><a href="tel:+358445559191">+358 44 555 9191</a></p>
+              <p><a href="tel:0445559191">044 5559191</a></p>
             </section>
 
             <section class="social">
@@ -427,6 +512,7 @@
       </section>
 
       <hr />
+
     </main>
 
     <footer id="last-part">
